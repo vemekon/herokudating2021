@@ -29,11 +29,11 @@ app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cors());
 
-const apath = path.resolve(__dirname);
+const apath = path.resolve(__dirname, "../frontend/my-app/build");
 console.log(apath);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("../frontend/my-app/build"));
+  app.use(express.static(apath));
 }
 
 // routes middleware
