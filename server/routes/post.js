@@ -7,6 +7,7 @@ const { authCheck, adminCheck } = require("../middlewares/auth");
 
 // controller
 const { createOrUpdateUser, currentUser } = require("../controllers/auth");
+const { createPosts, getPosts } = require("../controllers/post");
 //const { createPosts, getPosts } = require("../controllers/post");
 
 router.post("/post", authCheck, createPosts);

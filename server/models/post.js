@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
-const messagetSchema = new mongoose.Schema(
+const postSchema = new mongoose.Schema(
   {
     content: {
       type: String,

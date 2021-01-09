@@ -35,10 +35,10 @@ console.log(apath);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(apath));
 }
-// app.get("/bye", (req, res) => {
-//   console.log("lol bye");
-//   res.send("BYE BYE BYE BYE");
-// });
+app.get("/bye", (req, res) => {
+  console.log("lol bye");
+  res.send("BYE BYE BYE BYE");
+});
 
 // routes middleware
 readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
