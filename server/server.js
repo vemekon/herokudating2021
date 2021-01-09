@@ -35,9 +35,9 @@ console.log(apath);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(apath));
 }
-app.get("/a", (req, res) => {
-  console.log("you got here from /a");
-  res.send("You got here");
+app.get("/bye", (req, res) => {
+  console.log("lol bye");
+  res.send("BYE BYE BYE BYE");
 });
 
 // routes middleware
