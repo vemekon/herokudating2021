@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const { readdirSync } = require("fs");
+const path = require("path");
 require("dotenv").config();
 
 // app
@@ -28,8 +29,11 @@ app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cors());
 
+const apath = path.resolve(__dirname);
+console.log(apath);
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("my-app/build"));
+  app.use(express.static("../frontend/my-app/build"));
 }
 
 // routes middleware
