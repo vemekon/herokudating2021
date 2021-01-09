@@ -10,6 +10,10 @@ require("dotenv").config();
 // app
 const app = express();
 
+const aroutes = require("./routes/auth.js");
+const proutes = require("./routes/post.js");
+const uroutes = require("./routes/user.js");
+
 const DB =
   process.env.MONGODB_URI ||
   process.env.DATABASE ||
@@ -41,8 +45,14 @@ if (process.env.NODE_ENV === "production") {
 // });
 
 // routes middleware
-readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
-console.log(readdirSync("./routes"));
+
+// readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
+// console.log(readdirSync("./routes"));
+
+app.use("/api", aroutes);
+app.use("/api", proutes);
+app.use("/api", uroutes);
+
 // port
 const port = process.env.PORT || 8000;
 
