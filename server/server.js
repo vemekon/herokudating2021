@@ -34,7 +34,7 @@ app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cors());
 
 const apath = path.resolve(__dirname, "../frontend/my-app/build");
-console.log(apath);
+//console.log(apath);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(apath));
@@ -46,12 +46,17 @@ if (process.env.NODE_ENV === "production") {
 
 // routes middleware
 
+const routepath = path.resolve(__dirname, "routes");
+console.log(routepath);
+
+readdirSync(routepath).map((r) => app.use("/api", require("./routes/" + r)));
+//console.log(readdirSync("./routes"));
 // readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
 // console.log(readdirSync("./routes"));
 
-app.use("/api", aroutes);
-app.use("/api", proutes);
-app.use("/api", uroutes);
+// app.use("/api", aroutes);
+// app.use("/api", proutes);
+// app.use("/api", uroutes);
 
 // port
 const port = process.env.PORT || 8000;
