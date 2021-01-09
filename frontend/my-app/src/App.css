@@ -1,0 +1,182 @@
+.App {
+  text-align: center;
+}
+*{
+  overflow-x: hidden;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+.navbar-nav{
+  margin-left: auto !important;
+}
+
+
+
+
+
+
+
+.view {
+  background-image: url('https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center center;
+}
+
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+  .search-cont{
+    padding:0 !important;
+    margin:0 !important;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 650px;
+  }
+}
+
+
+
+.rgba-gradientr {
+  background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+}
+
+.card {
+  background-color: rgba(81, 81, 100, 0.3);
+}
+
+.md-form label {
+  color: #ffffff;
+}
+
+h6 {
+  line-height: 1.7;
+}
+.cardInfo{
+ height:15rem;
+ position:relative;
+ overflow: hidden;
+
+}
+.cardInfo img{
+  height:100%;
+  width:100%;
+}
+.cardInfo p{
+  position: absolute;
+  bottom:0%;
+  width:100%;
+  background: rgba(18, 18, 19, 0.6);
+  text-align: center;
+  padding:1rem ;
+  overflow: hidden;
+  transform: translateX(-120%);
+  transition: all .3s linear;
+  color: white;
+  cursor: pointer;
+}
+.cardInfo:hover p{
+  transform: translateX(0);
+}
+.mask{
+  background: rgba(74, 36, 214,0.4);
+  height:30rem;
+  cursor: pointer;
+  transition: all .2s linear
+  
+}
+.mask:hover{
+  background: rgba(74, 36, 214,0.2);
+}
+.main-mask{
+  background:rgba(58, 58, 110, 0.6);
+  background-image: url('https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center center;
+}
+.mask div{
+  height:30%;
+}
+
+.mask svg{
+  width: 6rem;
+  height:6rem;
+  color: white;
+  padding-top: 10%;
+}
+.signin-container{
+  background: rgba(78, 78, 104, 0.6);
+  height: 100vh;
+}
+.signin-container .container{
+  height:80vh;
+  padding:2rem;
+  background:rgba(227, 227, 233, 0.4) !important;
+  border-radius: 7px;
+}
+
+.profile-element img{
+   width:9rem;
+   height:9rem;
+}
+.prf{
+  padding-top:1rem !important;
+  background-image: radial-gradient(rgba(145, 114, 114,0.4), rgba(53, 58, 59, 0.3), rgba(33, 59, 92, 0.3));
+}
+.profile-container{
+  background: rgba(227, 227, 233, 0.5) !important;
+}
+.rr{
+  border-radius: 50% !important;
+  width:3.5rem !important;
+  height: 3.5rem !important;
+  background: aqua !important;
+}
+.t{
+  font-size: 0.9rem;
+}
+
+Link{
+  text-decoration: none !important;
+}
