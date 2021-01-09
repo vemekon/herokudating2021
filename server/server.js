@@ -35,10 +35,14 @@ console.log(apath);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(apath));
 }
+app.get("/a", (req, res) => {
+  console.log("you got here from /a");
+  res.send("You got here");
+});
 
 // routes middleware
-//readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
-//console.log(readdirSync("./routes"));
+readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
+console.log(readdirSync("./routes"));
 // port
 const port = process.env.PORT || 8000;
 
