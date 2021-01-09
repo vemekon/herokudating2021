@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "cd my-app && npm run build",
-    "install-client": "cd my-app && npm install",
+    "install-client": "cd frontend/my-app && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "starts": "nodemon server.js",
     "client": "cd my-app && npm start"

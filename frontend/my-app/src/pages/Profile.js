@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CardInfo from "../components/CardInfo";
@@ -33,9 +34,11 @@ export const Profile = () => {
       });
       const msglength = result.data.message && result.data.message.length;
       setMsg(msglength);
-      const aa = result.data.message.map((x) =>
-        x.content.map((y) => console.log(y.body))
-      );
+      const aa =
+        result.data.message &&
+        result.data.message.map((x) =>
+          x.content.map((y) => console.log(y.body))
+        );
     } catch (error) {
       console.log(error);
     }
@@ -143,8 +146,10 @@ export const Profile = () => {
       </div>
 
       <div className="row p-2 mt-2 shadow ps-5 ms-4 bg-white rounded container  ">
-        <p>{friends.length > 0 ? "Best Friends" : "Best Match"}</p>
-        {friends.length > 0 ? bestFriends() : bestMatches(CardinfoProfileData)}
+        <p>{friends && friends.length > 0 ? "Best Friends" : "Best Match"}</p>
+        {friends && friends.length > 0
+          ? bestFriends()
+          : bestMatches(CardinfoProfileData)}
       </div>
       <div className="row  mt-2 text-center shadow  bg-white  p-3  ">
         <p className="text-muted col-md-2">About US</p>

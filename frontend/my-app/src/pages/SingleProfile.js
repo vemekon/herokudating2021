@@ -99,8 +99,7 @@ export const SingleProfile = () => {
               </Link>
             ))}
             <Link className="col-2" onClick={addingFriend}>
-              {ProfileiconData[ProfileiconData.length - 1].svg}{" "}
-              <p>Add Friend</p>
+              {ProfileiconData[2].svg} <p>Add Friend</p>
             </Link>
           </div>
         </div>

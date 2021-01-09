@@ -345,12 +345,13 @@ exports.newMessage1 = async (req, res) => {
       .exec();
     //console.log(sUser.message);
     const retrievMsgS =
+      sUser.message &&
       sUser.message.length > 0 &&
       sUser.message.find(
         (x) => x.connect && x.connect._id.toString() === rUser._id.toString()
       );
     const retrievMsgR =
-      rUser.message.length > 0 &&
+    rUser.message && rUser.message.length > 0 &&
       rUser.message.find(
         (x) => x.connect && x.connect._id.toString() === sUser._id.toString()
       );
