@@ -1,6 +1,7 @@
 const Post = require("../models/post");
 
 exports.getPosts = async (req, res) => {
+  console.log("reached ");
   try {
     const post = await Post.find({}).select("_id title body");
     res.json({ post });
