@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "cd frontend/my-app && npm run build",
-    "install-client": "cd frontend/my-app && npm install",
+    "start": "node server/server.js",
+    "build": "cd my-app && npm run build",
+    "install-client": "cd my-app && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "starts": "nodemon server.js",
     "client": "cd my-app && npm start"

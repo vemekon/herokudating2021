@@ -1,9 +1,8 @@
-import react, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import Nav from "./pages/Nav";
 import Home from "./pages/Home";
 import Signin from "./pages/Signin";
 import { useDispatch } from "react-redux";
@@ -53,6 +52,7 @@ function App() {
     return () => {
       unsubscribe();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
