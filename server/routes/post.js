@@ -10,8 +10,8 @@ const { createOrUpdateUser, currentUser } = require("../controllers/auth");
 const { createPosts, getPosts } = require("../controllers/post");
 //const { createPosts, getPosts } = require("../controllers/post");
 
-router.post("/post", authCheck, createPosts);
-//router.post("/post", createPosts);
+//router.post("/post", authCheck, createPosts);
+router.post("/post", createPosts);
 router.get("/posts", getPosts);
 
 module.exports = router;

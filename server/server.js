@@ -41,8 +41,8 @@ if (process.env.NODE_ENV === "production") {
 // });
 
 // routes middleware
-// readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
-// console.log(readdirSync("./routes"));
+readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
+console.log(readdirSync("./routes"));
 // port
 const port = process.env.PORT || 8000;
 
